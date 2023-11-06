@@ -25,11 +25,6 @@
     transform: translate(0, -50%)
 }
 
-.amelia_logo img{
-}
-
-.header_menu{}
-
 .header_list{
     display: flex;
     gap: 40px;
@@ -41,12 +36,13 @@
     position: relative;
 }
 
+
 .header_list li a{
     text-decoration: none;
     text-transform: uppercase;
     color: orange;
     white-space: nowrap;
-    padding: 10px 25px;
+    padding: 10px 20px 10px 40px;
     display: block;
 }
 
@@ -73,11 +69,11 @@
     top: 0;
     right: 100%;
     display: none;
+    width: 100%;
 }
 
 .submenu li {
     position: relative;
-    padding-right: 20px;
 }
 
 .submenu a{
@@ -89,11 +85,29 @@
 .submenu li a{
     padding: 10px 20px;
     font-size: 20px;
+    text-align: center;
 }
 
 .one_more_list li:hover .submenu{
     display: block;
 }
 
+.header_list > li:nth-child(1){
+    display: block;
+    background: grey url('../images/home.svg') no-repeat 10px / 20px 20px;
+}
 
-/*--------Galary------*/
+.header_list > li:nth-child(2){
+    display: block;
+    background: grey url('../images/galery.svg') no-repeat 10px / 20px 20px;
+}
+
+.header_list > li:nth-child(3){
+    display: block;
+    background: grey url('../images/arrow_down.svg') no-repeat right 10px / 20px 20px;
+}
+
+.icon_layouts{
+    display: block;
+    background: grey url('../images/arrow_left.svg') no-repeat 10px / 20px 20px;
+}
