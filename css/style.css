@@ -1,9 +1,5 @@
 @import url('reset.css');
 
-.hidden{
-    display: none;
-}
-
 /*-------------Menu---------------*/
 .header{
     background: grey;
@@ -33,9 +29,11 @@
     display: flex;
     gap: 40px;
     text-decoration: none;
+    position: relative;
 }
 
 .header_list li{
+    position: relative;
 }
 
 
@@ -49,6 +47,7 @@
 }
 
 .one_more_list{
+    position: absolute;
     top: 100%;
     left: 0;
     padding-top: 20px;
@@ -66,6 +65,7 @@
 }
 
 .submenu{
+    position: absolute;
     top: 0;
     right: 100%;
     display: none;
@@ -73,6 +73,7 @@
 }
 
 .submenu li {
+    position: relative;
 }
 
 .submenu a{
@@ -88,30 +89,27 @@
 }
 
 .one_more_list li:hover .submenu{
-}
-
-.header_list > li:nth-child(1){
-}
-
-.header_list > li:nth-child(2){
-}
-
-.header_list > li:nth-child(3) > a {
     display: block;
+}
+
+.header_list > li:nth-child(1) a{
+    display: block;
+    background: url('../images/home.svg') no-repeat 10px / 20px;
+}
+
+.header_list > li:nth-child(2) a{
+    display: block;
+    background: url('../images/galery.svg') no-repeat 10px / 20px;
+}
+
+.header_list > li:nth-child(3)> a{
+    display: block;
+    background: url('../images/arrow_down.svg') no-repeat 98% 10px / 20px;
     padding: 10px 40px 10px 20px;
+
 }
 
 .icon_layouts{
-}
-
-.icons{
-    fill: red;
-    width: 30px;
-    height: 30px;
-}
-
-
-.containero{
-    width: 1200px;
-    margin: 0 auto;
+    display: block;
+    background: url('../images/arrow_left.svg') no-repeat 10px / 20px;
 }
