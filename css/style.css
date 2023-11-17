@@ -1,5 +1,9 @@
 @import url('reset.css');
 
+.hidden{
+    display: none;
+}
+
 /*-------------Menu---------------*/
 .header{
     background: grey;
@@ -30,6 +34,7 @@
     gap: 40px;
     text-decoration: none;
     position: relative;
+    column-gap: 20px;
 }
 
 .header_list li{
@@ -51,7 +56,12 @@
     top: 100%;
     left: 0;
     padding-top: 20px;
-    display: none;
+    opacity: 0;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.header_list li:hover .one_more_list{
+    opacity: 1;
 }
 
 .one_more_list li {
@@ -60,26 +70,27 @@
     left: 0;
 }
 
-.header_list li:hover .one_more_list{
-    display: block;
+.one_more_list > li:last-child {
+    display: flex;
 }
+
 
 .submenu{
     position: absolute;
     top: 0;
     right: 100%;
-    display: none;
+    opacity: 0;
     width: 100%;
 }
 
-.submenu li {
-    position: relative;
+.one_more_list li:hover .submenu{
+    opacity: 1;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .submenu a{
     padding: 10px 20px;
     font-size: 16px;
-    display: block;
 }
 
 .submenu li a{
@@ -88,28 +99,25 @@
     text-align: center;
 }
 
-.one_more_list li:hover .submenu{
-    display: block;
-}
 
 .header_list > li:nth-child(1) a{
-    display: block;
-    background: url('../images/home.svg') no-repeat 10px / 20px;
+    display: flex;
+    gap: 10px;
 }
 
 .header_list > li:nth-child(2) a{
-    display: block;
-    background: url('../images/galery.svg') no-repeat 10px / 20px;
+    display: flex;
+    gap: 10px;
 }
 
 .header_list > li:nth-child(3)> a{
-    display: block;
-    background: url('../images/arrow_down.svg') no-repeat 98% 10px / 20px;
     padding: 10px 40px 10px 20px;
-
+    display: flex;
+    gap: 10px;
 }
 
-.icon_layouts{
-    display: block;
-    background: url('../images/arrow_left.svg') no-repeat 10px / 20px;
+.icons{
+    width: 25px;
+    height: 25px;
 }
+
